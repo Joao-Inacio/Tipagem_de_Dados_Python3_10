@@ -3,18 +3,18 @@
 
 class Pessoa:
     def __init__(self):
-        self.atributo = ''
+        self._nome = ''
 
-    @property
+    @property  # GETTER
     def nome(self):
-        return self.atributo
+        return self._nome
 
-    @nome.setter
+    @nome.setter  # SETTER
     def nome(self, valor):
-        self.atributo = valor
+        self._nome = valor
 
 
 p1 = Pessoa()
-p1.atributo = 'João'
-print(p1.atributo)
+p1._nome = 'João'
+print(p1._nome)
 print(p1.nome)
